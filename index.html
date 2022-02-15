@@ -5,29 +5,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Open+Sans">
+  <link rel="stylesheet" href="style.css" > 
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+  *{
+    box-sizing: border-box;
+  }
+  
+  .backImg{
+    background-color: hsl(257, 40%, 49%);
+    position: absolute;
+    z-index: -1;
+    height: 635px;
+    width: 1350px;
+    margin-left: -10px;
+    margin-top: -10px;
+    
+  }
+  .con{
+    padding: 50px;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .logo{
+    width: 200px;
+    height: 40px;
+    margin-left: -15px;
+  }
+  .info{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+  }
+  .left{
+    width: 50%;
+  }
+  .img1{
+    height: 400px;
+    width: 700px;
+  }
+  .right{
+    width: 37%;
+  }
+  .right p:first-child{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 39px;
+    margin-top: 70px;
+    color: white;
+  }
+  .right p:nth-child(2){
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: white;
+  }
+  button{
+    border: none;
+    border-radius:25px;
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0px 3px 11px 0px #1b1b1b;
+    padding: 13px;
+    width: 150px;
+    font-family: "Open Sans";
+    font-weight: 400;
+  }
+  button:active{
+    color: white;
+    background-color:hsl(300, 69%, 71%);
+  }
+  .social{
+    position: relative;
+    left: 1100px;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+  }
+  .icon-facebook{
+    color: white;
+    font-size: 30px;
+  }
+  .icon-facebook:active{
+    color:hsl(300, 69%, 71%);
+  }
+  .icon-twitter{
+    color: white;
+    font-size: 30px;
+  }
+  .icon-twitter:active{
+    color:hsl(300, 69%, 71%);
+  }
+  .icon-instagram{
+    color: white;
+    font-size: 30px;
+  }
+  .icon-instagram:active{
+    color:hsl(300, 69%, 71%);
+  }
+  @media (max-width: 375px) {
+    .backImg{
+      height: 700px;
+      width: 375px;
+      
+    }
+    .con{
+      padding: 10px;
+    }
+    .logo{
+      width: 200px;
+      height: 40px;
+      margin-left: -15px;
+    }
+    .info{
+      flex-direction: column;
+      margin: 20px auto;
+    }
+    .left{
+      margin: auto;
+      margin-left: 50px;
+      width: 375px;
+    }
+    .img1{
+      margin: auto;
+      height: 150px;
+      width: 270PX;
+    }
+    .right{
+      width: 70%;
+      margin: auto;
+    }
+    .right p:first-child{
+      font-size: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .right p:nth-child(2){
+      text-align: center;
+    }
+    button{
+      border-radius:30px;
+      padding: 13px;
+      width: 200px;
+      margin-top: 20px;
+      margin: auto;
+      margin-left: 30px;
+    }
+    .social{
+      margin: auto;
+      margin-top: 80px;
+      position: initial;
+      left: 0px;
+      top: 0px;
+      display: flex;
+      justify-content: space-between;
+      width: 130px;
+    }
+  }
   </style>
 </head>
 <body>
-
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
-
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <img class="backImg" src="images\bg-desktop.svg">
+  <div class="con">
+    <img class="logo" src="images\logo.svg">
+    <div class="info">
+      <div class="left">
+        <img class="img1" src="images\illustration-mockups.svg">
+      </div>
+      <div class="right">
+        <p>Build The Community Your Fans Will Love</p>
+        <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+          Create connections with your users as you engage in genuine discussion. </p>
+        <button>Register</button>
+      </div>
+    </div>
+    <div class="social">
+      <span class="icon-facebook"></span>
+      <span class="icon-twitter"></span>
+      <span class="icon-instagram"></span>
+    </div>
+  </div>
 </body>
 </html>
